@@ -4,17 +4,17 @@ using namespace std;
 
 float close_values(float const psi[], float const pdf[], float const dv, int size){
     int step = 1;
-    float ans[size];
+    float x[size];
     for(int i = 0; i < size; i++){
-        ans[i] = psi[i] * pdf[i] * dv;
+        x[i] = psi[i] * pdf[i] * dv;
     }
     while(step < size){
         for(int i = 0; i + step < size; i += 2*step){
-            ans[i] = ans[i] +ans[i + step];
+            x[i] = x[i] + x[i + step];
         }
         step *= 2;
     }
-    return ans[0];
+    return x[0];
 }
 
 int main()
