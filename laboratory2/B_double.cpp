@@ -22,9 +22,9 @@ int main()
     double const f_pi = 3.14159265359;
     double const f_e = 2.718281828459;
     double T = 300;
-    unsigned int n = 10000000;
-    double left = -1000;
-    double right = 1000;
+    unsigned int n = 100000;
+    double left = -100;
+    double right = 100;
     double v = left;
     double dv = (right - left) / n;
     double *psi = 0;
